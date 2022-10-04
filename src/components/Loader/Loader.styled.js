@@ -43,19 +43,23 @@ export const LoaderCircle = styled.circle`
 	stroke-dashoffset: ${(props) => 1200 - Number(props.progress * 12)};
 	border-radius: 50%;
 	stroke-linecap: round;
-	transition: 1000ms;
+	transition: ${(props) => `${props.interval}ms`};
 `;
 
 export const Button = styled.button`
 	padding: 0.85rem 1rem;
 	background: white;
 	border: none;
-	box-shadow: 0 0 1px 1px gray;
+	box-shadow: 0 0 5px -2.5px gray;
 	border-radius: 0.5rem;
 	font-size: 1rem;
 	letter-spacing: 0.5px;
 	width: 120px;
 	cursor: pointer;
+	transition: 250ms;
+	&:hover {
+		box-shadow: 0 0 5px 0px gray;
+	}
 `;
 
 export const ButtonContainer = styled.div`

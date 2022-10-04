@@ -42,7 +42,13 @@ function useLoader({ interval = 1000 }) {
 		return () => id && clearInterval(id);
 	}, [start, pause, intervalId, interval]);
 
-	return { progress, pause, startAndRestartLoader, pauseAndResumeLoader };
+	return {
+		progress,
+		pause,
+		interval,
+		startAndRestartLoader,
+		pauseAndResumeLoader,
+	};
 }
 
 export default useLoader;

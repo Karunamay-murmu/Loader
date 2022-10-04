@@ -12,7 +12,7 @@ import {
 } from "./Loader.styled";
 
 function LoaderContainer() {
-	const { progress, pause, startAndRestartLoader, pauseAndResumeLoader } =
+	const { progress, pause, interval, startAndRestartLoader, pauseAndResumeLoader } =
 		useLoader({ interval: 1000 });
 	return (
 		<Container>
@@ -24,6 +24,7 @@ function LoaderContainer() {
 				>
 					<LoaderCircle
 						progress={progress}
+						interval={interval}
 						cx="204.5"
 						cy="204.5"
 						r="189.5"
